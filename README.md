@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Give it Beans Website
 
-## Getting Started
-
-First, run the development server:
+Stack
+    - Next.js
+    - Strapi CMS
+    - scss
+    - 
 
 ```bash
 npm run dev
