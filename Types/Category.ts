@@ -1,6 +1,6 @@
 import { Recipe } from "./Recipe";
 
-export interface Category {
+export default interface Category {
     id:           number;
     title:        string;
     slug:         string;
