@@ -10,3 +10,26 @@ $regular: 400;
 $slightly-bold: 500;
 $bold: 600;
 $very-bold: 700;
+
+a,
+p,
+span {
+    font-family: $text-font;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $text-font;
+    font-weight: $regular;
+}
+
+h5 {
+    font-size: 1.2rem;
+}

@@ -12,10 +12,4 @@ module.exports = {
   },
 }
 
-module.exports = {
-  env: {
-    CMS_API: "http://localhost:1337/",
-  },
-}
-
 module.exports = nextConfig

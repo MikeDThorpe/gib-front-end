@@ -1,7 +1,7 @@
 import Category from "./Category";
 import Tag from "./Tag";
 
-export interface Recipe {
+export default interface Recipe {
     id:           number;
     title:        string;
     description:  string;

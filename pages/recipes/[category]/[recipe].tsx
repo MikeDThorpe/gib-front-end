@@ -1,11 +1,26 @@
 import React from "react";
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { Recipe } from "../../../Types/Recipe";
+import Recipe from "../../../Types/Recipe";
+import BreadCrumbs from "../../../components/global/BreadCrumbs";
+import RecipeHeader from "../../../components/page/Recipe/RecipeHeader";
 
-const RecipePage = () => {
+export interface RecipePageProps {
+    recipe: Recipe;
+}
+
+const RecipePage = ({recipe}: RecipePageProps) => {
     return (
         <section>
-            <h1></h1>
+            <BreadCrumbs 
+                data={
+                    [
+                        {title: "Recipes", url: "/recipes"},
+                        {title: `${recipe.category.title}`, url: `/recipes/${recipe.category.title}`},
+                        {title: `${recipe.title}`, url: `/recipes/${recipe.category.title}/${recipe.slug}`}
+                    ]
+                }
+            />
+            <RecipeHeader recipe={recipe} />
         </section>
     );
 };
@@ -13,7 +28,7 @@ export default RecipePage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const apiResponse = await fetch(
-        `${process.env.CMS_API}recipes`
+        `http://localhost:1337/recipes`
     );
     const recipeData = await apiResponse.json()
 
@@ -34,5 +49,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-
+    const apiResponse = await fetch(
+        `http://localhost:1337/recipes/${context.params!.recipe}`
+      );
+      const recipeData = await apiResponse.json();
+    
+      return {
+        props: { recipe: recipeData },
+      };
 }
