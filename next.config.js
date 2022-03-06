@@ -5,7 +5,6 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-// add support for scss
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],

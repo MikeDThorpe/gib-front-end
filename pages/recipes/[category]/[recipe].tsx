@@ -24,6 +24,7 @@ const RecipePage = ({recipe}: RecipePageProps) => {
         </section>
     );
 };
+
 export default RecipePage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
