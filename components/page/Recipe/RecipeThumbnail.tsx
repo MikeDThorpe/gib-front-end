@@ -8,12 +8,14 @@ export interface RecipeThumbnailProps {
 const RecipeThumbnail = ({src}: RecipeThumbnailProps) => {
   if (!src) {
     return (
-      <Image
-        src="/assets/images/no-image-thumbnail.jpg"
-        alt="Image unavailable for this recipe."
-        width={500}
-        height={500}
-      />
+      <div className="recipe_header_image_container">
+        <Image
+          src="/assets/images/no-image-thumbnail.jpg"
+          alt="Image unavailable for this recipe."
+          layout="fill"
+          objectFit="fill"
+          />
+      </div>
     );
   }
 

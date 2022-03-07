@@ -1,8 +1,10 @@
 @import "resets";
+@import "breakpoints";
 
 // branding
 @import "brand/colours";
 @import "brand/fonts";
+@import "brand/typography";
 
 // components
 @import "components/header";
