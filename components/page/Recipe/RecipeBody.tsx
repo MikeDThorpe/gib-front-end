@@ -1,12 +1,17 @@
 import React from "react";
+import Recipe from "../../../Types/Recipe";
 import RecipeIngredients from "./RecipeIngredients";
 import RecipeInstructions from "./RecipeInstructions";
 
-const RecipeBody = () => {
+export interface RecipeBodyProps {
+    recipe: Recipe;
+}
+
+const RecipeBody = ({recipe}: RecipeBodyProps) => {
     return (
         <section className="mt-5 recipe_body">
-            <RecipeIngredients />
-            <RecipeInstructions />
+            <RecipeIngredients ingredients={recipe.ingredients} />
+            <RecipeInstructions instructions={recipe.instructions}/>
         </section>
     );
 };

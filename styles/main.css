@@ -20,12 +20,19 @@
 
 a,
 p,
+ul,
+li,
+ol,
 span {
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
   color: black;
   text-decoration: none;
   list-style: none; }
+
+a {
+  cursor: pointer; }
 
 h1,
 h2,
@@ -40,6 +47,12 @@ h1 {
 
 h2 {
   font-size: 2rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 1.4rem; }
 
 h5 {
   font-size: 1.2rem; }
@@ -80,3 +93,9 @@ h5 {
   .recipe_header {
     display: flex;
     align-items: center; } }
+
+@media (min-width: 1000px) {
+  .recipe_body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px; } }

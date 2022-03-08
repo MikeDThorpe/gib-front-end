@@ -3,6 +3,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Recipe from "../../../Types/Recipe";
 import BreadCrumbs from "../../../components/global/BreadCrumbs";
 import RecipeHeader from "../../../components/page/Recipe/RecipeHeader";
+import RecipeBody from "../../../components/page/Recipe/RecipeBody";
 
 export interface RecipePageProps {
   recipe: Recipe;
@@ -28,6 +29,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
         ]}
       />
       <RecipeHeader recipe={recipe} />
+      <RecipeBody recipe={recipe}/>
     </>
   );
 };

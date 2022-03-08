@@ -17,8 +17,6 @@
         margin-left: 40px;
     }
 }
-
-
 .recipe_header {
 
     &_image_container {
@@ -37,5 +35,11 @@
         align-items: center;
     }
 }
-
+.recipe_body {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+    }
+}
 
