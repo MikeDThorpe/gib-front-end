@@ -15,7 +15,9 @@ export interface RecipeHeaderProps {
 const RecipeHeader = ({ recipe }: RecipeHeaderProps) => {
   return (
     <section className="mt-4 recipe_header">
+      <div className="recipe_header_image">
       <RecipeThumbnail src={""} />
+      </div>
       <RecipeMeta recipe={recipe} />
     </section>
   );

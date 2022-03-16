@@ -9,7 +9,7 @@ const RecipeIngredients = ({ ingredients }: RecipeIngredientsProps) => {
   const outputIngredients = () => {
     return ingredients.split("-").map((ingredient, index) => {
       return (
-        <li key={index} className="mb-2">
+        <li key={index} className="mb-3">
           {ingredient.trim()}
         </li>
       );

@@ -4,6 +4,7 @@ import Recipe from "../../../Types/Recipe";
 import BreadCrumbs from "../../../components/global/BreadCrumbs";
 import RecipeHeader from "../../../components/page/Recipe/RecipeHeader";
 import RecipeBody from "../../../components/page/Recipe/RecipeBody";
+import {LinkedCategoryRecipes} from "../../../components/page/Recipe/LinkedCategoryRecipes";
 
 export interface RecipePageProps {
   recipe: Recipe;
@@ -30,6 +31,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
       />
       <RecipeHeader recipe={recipe} />
       <RecipeBody recipe={recipe}/>
+      <LinkedCategoryRecipes category={recipe.category.title}/>
     </>
   );
 };
