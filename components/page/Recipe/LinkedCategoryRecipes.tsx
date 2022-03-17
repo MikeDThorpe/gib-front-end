@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
+import Recipe from "../../../Types/Recipe";
 import RecipeCard from "./RecipeCard";
 export interface LinkedRecipesProps {
   category?: string;
   tag?: string;
+  focusRecipeId?: number // prevents the same recipe being linked to its own page
 }
 
 export const LinkedCategoryRecipes = ({
   category,
-  tag,
+  focusRecipeId
 }: LinkedRecipesProps) => {
   const [recipes, setRecipes] = useState([]);
   const [fetchingData, setFetchingData] = useState(false);
@@ -18,7 +20,8 @@ export const LinkedCategoryRecipes = ({
       `http://localhost:1337/recipes?category.title=${category}`
     );
     const recipes = await res.json();
-    let formattedRecipes = recipes.slice(recipes.length - 5, recipes.length);
+    let formattedRecipes = recipes.filter((recipe: Recipe)=> recipe.id !== focusRecipeId)
+      .slice(recipes.length - 5, recipes.length);
     setRecipes(formattedRecipes);
     setFetchingData(false);
   };

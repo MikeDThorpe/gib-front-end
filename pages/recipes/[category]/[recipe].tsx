@@ -31,7 +31,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
       />
       <RecipeHeader recipe={recipe} />
       <RecipeBody recipe={recipe}/>
-      <LinkedCategoryRecipes category={recipe.category.title}/>
+      <LinkedCategoryRecipes category={recipe.category.title} focusRecipeId={recipe.id}/>
     </>
   );
 };
