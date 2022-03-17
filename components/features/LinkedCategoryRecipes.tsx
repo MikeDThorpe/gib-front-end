@@ -1,6 +1,6 @@
 import React from "react";
-import useLinkedRecipes from "../../../hooks/useLinkedRecipes";
-import RecipeCard from "./RecipeCard";
+import useLinkedRecipes from "../../hooks/useLinkedRecipes";
+import RecipeCard from "../page/Recipe/RecipeCard";
 
 export interface LinkedCategoryRecipesProps {
 	categoryTitle: string;

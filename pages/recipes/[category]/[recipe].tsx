@@ -4,7 +4,7 @@ import Recipe from "../../../Types/Recipe";
 import BreadCrumbs from "../../../components/global/BreadCrumbs";
 import RecipeHeader from "../../../components/page/Recipe/RecipeHeader";
 import RecipeBody from "../../../components/page/Recipe/RecipeBody";
-import {LinkedCategoryRecipes} from "../../../components/page/Recipe/LinkedCategoryRecipes";
+import {LinkedCategoryRecipes} from "../../../components/features/LinkedCategoryRecipes";
 
 export interface RecipePageProps {
   recipe: Recipe;
