@@ -31,7 +31,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
       />
       <RecipeHeader recipe={recipe} />
       <RecipeBody recipe={recipe}/>
-      <LinkedCategoryRecipes category={recipe.category.title} focusRecipeId={recipe.id}/>
+      <LinkedCategoryRecipes categoryTitle={recipe.category.title} focusRecipeId={recipe.id}/>
     </>
   );
 };
@@ -39,7 +39,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
 export default RecipePage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const apiResponse = await fetch(`http://localhost:1337/recipes`);
+  const apiResponse = await fetch(`${process.env.CMS_HOST}recipes`);
   const recipeData = await apiResponse.json();
 
   const paths = recipeData.map((recipe: Recipe) => {
@@ -59,8 +59,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const apiResponse = await fetch(
-    `http://localhost:1337/recipes/${context.params!.recipe}`
-  );
+		`${process.env.CMS_HOST}recipes/${context.params!.recipe}`
+	);
   const recipeData = await apiResponse.json();
 
   return {
