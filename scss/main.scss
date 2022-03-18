@@ -1,5 +1,5 @@
-@import "resets";
-@import "breakpoints";
+@import "design/resets";
+@import "design/breakpoints";
 
 // branding
 @import "brand/colours";
@@ -9,4 +9,5 @@
 // components
 @import "components/header";
 @import "components/footer";
-@import "components/recipePage"
+@import "components/recipePage";
+@import "components/button";

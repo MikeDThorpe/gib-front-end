@@ -12,7 +12,7 @@ export interface RecipeMetaProps {
 const RecipeMeta = ({recipe}: RecipeMetaProps) => {
     return (
       <section className="recipe_meta">
-        <h1 className="mb-4 bold">{recipe.title}</h1>
+        <h2 className="mb-4 bold">{recipe.title}</h2>
         <h5 className="mb-4">{recipe.description}</h5>
         <section className="recipe_meta_grid">
           <div className="d-flex align-items-center">
