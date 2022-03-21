@@ -1,9 +1,6 @@
 // @flow
 import * as React from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import RecipeThumbnail from "./RecipeThumbnail";
 import Recipe from "../../../Types/Recipe";
 import RecipeMeta from "./RecipeMeta";

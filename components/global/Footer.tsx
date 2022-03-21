@@ -5,7 +5,7 @@ const Footer = () => {
 			<footer className="mt-5 d-flex align-items-center footer">
 				<div className="container">
 					<div className="header_logo">
-						<h1>Give it Beans.</h1>
+						<h1>Give it Beans!</h1>
 					</div>
 				</div>
 			</footer>

@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
-import BreadCrumbs from '../components/global/BreadCrumbs'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-    </div>
-  )
-}
+	return (
+		<div>
+			<h1>Home page</h1>
+		</div>
+	);
+};
 
-export default Home
+export default Home;

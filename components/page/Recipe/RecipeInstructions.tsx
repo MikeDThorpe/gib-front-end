@@ -1,5 +1,4 @@
 import React from "react";
-import Recipe from "../../../Types/Recipe";
 
 export interface RecipeInstructionsProps {
   instructions: string;

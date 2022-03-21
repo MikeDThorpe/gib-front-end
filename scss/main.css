@@ -67,13 +67,13 @@ h4 {
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .header {
   width: 100%;
   height: 80px;
-  background-color: #FE6942;
+  background-color: #ff6842;
   border-bottom: 2px solid black;
 }
 
@@ -93,7 +93,8 @@ h5 {
 .footer {
   width: 100%;
   height: 80px;
-  background-color: #FE6942;
+  background-color: black;
+  border-top: 5px solid #ff6842;
 }
 
 .recipe_meta_grid {
@@ -115,6 +116,13 @@ h5 {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
+}
+
+.recipe_meta_title_underline {
+  height: 5px;
+  width: 100%;
+  display: block;
+  background-color: #ff6842;
 }
 
 @media (min-width: 1000px) {
@@ -194,7 +202,7 @@ h5 {
 }
 
 .button-main {
-  background-color: #FE6942;
+  background-color: #ff6842;
   color: white;
 }
 /*# sourceMappingURL=main.css.map */

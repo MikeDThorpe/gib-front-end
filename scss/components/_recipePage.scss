@@ -11,6 +11,12 @@
       grid-template-rows: 1fr 1fr;
     }
   }
+  &_title_underline {
+    height: 5px;
+    width: 100%;
+    display: block;
+    background-color: $main-dark;
+  }
 
   @include desktop {
     margin-left: 40px;
