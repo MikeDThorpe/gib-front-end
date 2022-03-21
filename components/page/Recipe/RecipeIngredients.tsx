@@ -17,13 +17,13 @@ const RecipeIngredients = ({ ingredients }: RecipeIngredientsProps) => {
   };
 
   return (
-    <section>
-      <div className="border-bottom pb-4">
-        <h2>What You'll Need</h2>
-      </div>
-      <ul className="pt-3">{outputIngredients()}</ul>
-    </section>
-  );
+		<section>
+			<div className="border-bottom pb-4">
+				<h2>What You&apos;ll Need</h2>
+			</div>
+			<ul className="pt-3">{outputIngredients()}</ul>
+		</section>
+	);
 };
 
 export default RecipeIngredients;

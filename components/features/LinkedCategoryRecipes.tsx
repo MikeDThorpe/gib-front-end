@@ -12,7 +12,10 @@ export const LinkedCategoryRecipes = ({
 	categoryTitle,
 	focusRecipeId,
 }: LinkedCategoryRecipesProps) => {
-	const { recipes, fetchingData } = useLinkedRecipes(categoryTitle, focusRecipeId)
+	const { recipes, fetchingData } = useLinkedRecipes(
+		categoryTitle,
+		focusRecipeId
+	);
 	return (
 		<section className="border-top">
 			<h2 className="my-4">More {categoryTitle} Recipes</h2>
@@ -31,10 +34,12 @@ export const LinkedCategoryRecipes = ({
 					})}
 				</section>
 			)}
-			<Link href={`/recipes/${categoryTitle.toLowerCase()}`}>
-				<button className="button button-main d-block mx-auto mt-5">
-					More Vegetarian Recipes
-				</button>
+			<Link href={`/recipes/${categoryTitle.toLowerCase()}`} passHref>
+				<a>
+					<button className="button button-main d-block mx-auto mt-5">
+						More Vegetarian Recipes
+					</button>
+				</a>
 			</Link>
 		</section>
 	);
