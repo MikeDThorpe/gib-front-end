@@ -1,4 +1,5 @@
 import type { GetServerSideProps } from "next";
+import Link from "next/link";
 import Recipe from "../Types/Recipe";
 import RecipesGrid from "../components/features/RecipesGrid";
 
@@ -7,12 +8,17 @@ interface HomeProps {
 }
 
 const Home = ({ latestRecipes }: HomeProps) => {
-  console.log(latestRecipes);
-
   return (
     <section>
       <h2 className="text-center mb-5">Latest Recipes</h2>
-      <RecipesGrid recipes={latestRecipes} />
+      <RecipesGrid recipes={latestRecipes} limit={6} />
+      <Link href={`/recipes`} passHref>
+        <a>
+          <button className="button button-main d-block mx-auto mt-5">
+            More Recipes
+          </button>
+        </a>
+      </Link>
     </section>
   );
 };

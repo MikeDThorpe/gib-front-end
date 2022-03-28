@@ -27,7 +27,7 @@ const RecipeCard = ({ recipe, displayMeta }: RecipeCardProps) => {
         case recipeMeta.DATE:
           return (
             <>
-              <p>Added {parseDate(recipe.created_at)}</p>
+              <small>Added {parseDate(recipe.created_at)}</small>
             </>
           );
         case recipeMeta.TAGS:
