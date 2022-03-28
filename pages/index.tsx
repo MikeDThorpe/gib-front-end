@@ -10,7 +10,7 @@ interface HomeProps {
 const Home = ({ latestRecipes }: HomeProps) => {
   return (
     <section>
-      <h2 className="text-center mb-5">Latest Recipes</h2>
+      <h2 className="text-center mb-5 bold">Latest Recipes</h2>
       <RecipesGrid recipes={latestRecipes} limit={6} />
       <Link href={`/recipes`} passHref>
         <a>
