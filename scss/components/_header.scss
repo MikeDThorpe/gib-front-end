@@ -1,18 +1,19 @@
 .header {
-	width: 100%;
-	height: 80px;
-	background-color: $main-dark;
-    border-bottom: 2px solid $black;
+  width: 100%;
+  height: 80px;
+  background-color: $main-dark;
+  border-bottom: 2px solid $black;
 
-	&_logo {
-		font-family: $logo-font;
-		color: $white;
-		&_container {
-			width: fit-content;
-			padding: 5px 10px;
-			background-color: $black;
-		}
-	}
-	&-nav {
-	}
+  &_logo {
+    font-family: $logo-font;
+    color: $white;
+    cursor: pointer;
+    &_container {
+      width: fit-content;
+      padding: 5px 10px;
+      background-color: $black;
+    }
+  }
+  &-nav {
+  }
 }
