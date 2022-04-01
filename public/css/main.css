@@ -84,6 +84,7 @@ h5 {
 .header_logo {
   font-family: "Staatliches", sans-serif;
   color: white;
+  cursor: pointer;
 }
 .header_logo_container {
   width: fit-content;
@@ -94,7 +95,7 @@ h5 {
   width: 100%;
   height: 80px;
   background-color: black;
-  border-top: 5px solid #ff6842;
+  border-top: 2px solid #ff6842;
 }
 
 .recipe_meta_grid {
