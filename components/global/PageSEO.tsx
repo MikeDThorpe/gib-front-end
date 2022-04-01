@@ -6,9 +6,8 @@ export interface PageSEOProps {
   description: string;
 }
 
-const PageSEO = ({ title, description}: PageSEOProps) => {
-    const router = useRouter();
-    console.log(router.pathname)
+const PageSEO = ({ title, description }: PageSEOProps) => {
+  const router = useRouter();
   return (
     <Head>
       <title>{title} | Giveitbeans.co.uk</title>
@@ -24,7 +23,12 @@ const PageSEO = ({ title, description}: PageSEOProps) => {
         content={description}
         key="description"
       />
-      <meta name="url" property="og:url" content={`https://www.giveitbeans.co.uk${router.pathname}`} key="url" />
+      <meta
+        name="url"
+        property="og:url"
+        content={`https://www.giveitbeans.co.uk${router.pathname}`}
+        key="url"
+      />
       <meta name="type" property="og:type" content="blog" key="type" />
     </Head>
   );

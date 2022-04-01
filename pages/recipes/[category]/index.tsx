@@ -10,7 +10,6 @@ const CategoryPage = ({
   categoryTitle,
   categoryRecipes,
 }: CategoryPageProps) => {
-  console.log(categoryTitle);
   return (
     <>
       <h2 className="my-5 text-center bold">{categoryTitle} Recipes</h2>
