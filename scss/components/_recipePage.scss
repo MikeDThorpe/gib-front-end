@@ -55,6 +55,8 @@
   }
 }
 .recipe_card_grid {
+  display: grid;
+  gap: 30px;
   @include tablet {
     display: grid;
     gap: 30px;

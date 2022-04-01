@@ -158,6 +158,10 @@ h5 {
   position: relative;
 }
 
+.recipe_card_grid {
+  display: grid;
+  gap: 30px;
+}
 @media (min-width: 768px) {
   .recipe_card_grid {
     display: grid;

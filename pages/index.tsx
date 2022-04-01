@@ -2,7 +2,7 @@ import type { GetServerSideProps } from "next";
 import Recipe from "../Types/Recipe";
 import RecipesGrid from "../components/features/RecipesGrid";
 import PageSEO from "../components/global/PageSEO";
-import CategoryLinks from "../components/features/CategoryLinks";
+// import CategoryLinks from "../components/features/CategoryLinks";
 
 interface HomeProps {
   latestRecipes: Recipe[];
@@ -19,7 +19,7 @@ const Home = ({ latestRecipes, categories }: HomeProps) => {
       />
       <h2 className="text-center my-5 bold">Latest Recipes</h2>
       <RecipesGrid recipes={latestRecipes} limit={6} />
-      <CategoryLinks categories={categories} />
+      {/* <CategoryLinks categories={categories} /> */}
     </>
   );
 };
