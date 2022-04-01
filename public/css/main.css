@@ -78,7 +78,7 @@ h5 {
 .header {
   width: 100%;
   height: 80px;
-  background-color: #ff6842;
+  background-color: #85aaaa;
   border-bottom: 2px solid black;
 }
 .header_logo {
@@ -95,7 +95,7 @@ h5 {
   width: 100%;
   height: 80px;
   background-color: black;
-  border-top: 2px solid #ff6842;
+  border-top: 2px solid #85aaaa;
 }
 
 .recipe_meta_grid {
@@ -115,7 +115,7 @@ h5 {
   height: 5px;
   width: 100%;
   display: block;
-  background-color: #ff6842;
+  background-color: #85aaaa;
 }
 @media (min-width: 1000px) {
   .recipe_meta {
@@ -185,7 +185,7 @@ h5 {
 }
 
 .button-main {
-  background-color: #ff6842;
+  background-color: #85aaaa;
   color: white;
 }
 

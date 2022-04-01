@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
 
-const RecipePage: NextPage = () => {
+
+const RecipePage = () => {
 	return (
 		<div>
-			<h1>Home page</h1>
+			<h2 className="bold text-center my-5">Recipes</h2>
 		</div>
 	);
 };
