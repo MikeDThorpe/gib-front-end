@@ -13,7 +13,7 @@ const CategoryPage = ({
   return (
     <>
       <h2 className="my-5 text-center bold">{categoryTitle} Recipes</h2>
-      <RecipesGrid recipes={categoryRecipes} />
+      <RecipesGrid recipes={categoryRecipes} displayAll={true} />
     </>
   );
 };

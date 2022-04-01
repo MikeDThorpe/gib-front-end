@@ -33,7 +33,7 @@ const RecipeMeta = ({recipe}: RecipeMetaProps) => {
               alt="shopping tags icon"
             />
             {recipe.tags.map((tag, index) => (
-              <Link key={tag.id} href={`/recipes/tags/${tag.title}`}>
+              <Link key={tag.id} href={`/recipes/tags/${tag.slug}`}>
                 <a>
                   <h5 className="mx-1 my-0 bold">
                     {tag.title.toUpperCase()}
