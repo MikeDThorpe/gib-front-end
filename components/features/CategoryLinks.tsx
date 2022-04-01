@@ -5,7 +5,7 @@ interface CategoryLinksProps {
   categories: { id: number; title: string }[];
 }
 
-const CategoryLinks = ({ categories }) => {
+const CategoryLinks = ({ categories }: CategoryLinksProps) => {
   const setIconUrl = (categoryTitle) => {
     switch (categoryTitle) {
       case "Vegetarian":

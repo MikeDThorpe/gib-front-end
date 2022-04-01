@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Recipe from "../../Types/Recipe";
 import RecipeCard from "../page/Recipe/RecipeCard";
 import { recipeMeta } from "../page/Recipe/RecipeCard";

@@ -1,6 +1,6 @@
 import Tag from "../../../Types/Tag";
 import { GetStaticProps, GetStaticPaths } from "next";
-import RecipesGrid from "../../../components/features/RecipesGrid";
+// import RecipesGrid from "../../../components/features/RecipesGrid";
 
 interface TagPageProps {
   tag: Tag;

@@ -1,6 +1,3 @@
-// @flow
-import * as React from "react";
-
 import RecipeThumbnail from "./RecipeThumbnail";
 import Recipe from "../../../Types/Recipe";
 import RecipeMeta from "./RecipeMeta";
