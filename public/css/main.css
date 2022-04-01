@@ -150,6 +150,7 @@ h5 {
 
 .recipe_card {
   width: 100%;
+  cursor: pointer;
 }
 .recipe_card_image {
   height: 400px;
