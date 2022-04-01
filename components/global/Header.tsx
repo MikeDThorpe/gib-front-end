@@ -1,11 +1,13 @@
-import React from 'react'
+import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="header mb-5 d-flex align-items-center">
+        <header className="header d-flex align-items-center">
             <div className="container">
                 <div className="header_logo_container">
-                <div className="header_logo"><h1>Give it Beans!</h1></div>
+                    <Link href={"/"} passHref>
+                        <div className="header_logo"><h1>Give it Beans!</h1></div>
+                    </Link>
                 </div>
             </div>
         </header>

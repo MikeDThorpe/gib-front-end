@@ -6,29 +6,33 @@ import { recipeMeta } from "../page/Recipe/RecipeCard";
 
 interface RecipesGridProps {
   recipes: Recipe[];
-  limit: number;
+  limit?: number;
+  displayAll?: boolean;
 }
 
-const RecipesGrid = ({ recipes, limit }: RecipesGridProps) => {
+const RecipesGrid = ({ recipes, limit, displayAll }: RecipesGridProps) => {
   const [recipesToShow, setRecipesToShow] = useState<Recipe[]>([]);
 
   useEffect(() => {
-    const filteredRecipes: Recipe[] = recipes.reverse().slice(0, limit);
+    const filteredRecipes: Recipe[] = displayAll
+      ? recipes
+      : recipes.reverse().slice(0, limit);
+
     setRecipesToShow(filteredRecipes);
   }, []);
 
   return (
-      <section className="recipe_card_grid">
-        {recipesToShow.map((recipe) => {
-          return (
-            <RecipeCard
-              recipe={recipe}
-              key={recipe.id}
-              displayMeta={[recipeMeta.DATE]}
-            />
-          );
-        })}
-      </section>
+    <section className="recipe_card_grid">
+      {recipesToShow.map((recipe) => {
+        return (
+          <RecipeCard
+            recipe={recipe}
+            key={recipe.id}
+            displayMeta={[recipeMeta.DATE]}
+          />
+        );
+      })}
+    </section>
   );
 };
 

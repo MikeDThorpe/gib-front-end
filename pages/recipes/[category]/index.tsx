@@ -1,40 +1,57 @@
-import Category from "../../../Types/Category";
+import RecipesGrid from "../../../components/features/RecipesGrid";
+import Recipe from "../../../Types/Recipe";
 
 export interface CategoryPageProps {
-	categories: Category[];
+  categoryTitle: string;
+  categoryRecipes: Recipe[];
 }
 
-const CategoryPage = ({ categories }: CategoryPageProps) => {
-	return <></>;
+const CategoryPage = ({
+  categoryTitle,
+  categoryRecipes,
+}: CategoryPageProps) => {
+  console.log(categoryTitle);
+  return (
+    <>
+      <h2 className="my-5 text-center bold">{categoryTitle} Recipes</h2>
+      <RecipesGrid recipes={categoryRecipes} />
+    </>
+  );
 };
 
 export default CategoryPage;
 
 export async function getStaticPaths() {
-	const res = await fetch(`${process.env.CMS_HOST}categories`);
-	const categoryData = await res.json();
+  const res = await fetch(`${process.env.CMS_HOST}categories`);
+  const categoryData = await res.json();
 
-	const paths = categoryData.map((category) => {
-		return {
-			params: {
-				category: category.slug,
-			},
-		};
-	});
+  const paths = categoryData.map((category) => {
+    return {
+      params: {
+        category: category.slug,
+      },
+    };
+  });
 
-	return {
-		paths,
-		fallback: false,
-	};
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps(context) {
-	const res = await fetch(
-		`${process.env.CMS_HOST}categories/${context.params.category}`
-	);
-	const categoryData = await res.json();
+  const categoryTitle =
+    context.params.category[0].toUpperCase() +
+    context.params.category.substring(1);
+  const res = await fetch(
+    `${process.env.CMS_HOST}recipes/?category.title=${categoryTitle}`
+  );
+  const recipes = await res.json();
 
-	return {
-		props: { categories: categoryData },
-	};
+  return {
+    props: {
+      categoryTitle: categoryTitle,
+      categoryRecipes: recipes,
+    },
+  };
 }

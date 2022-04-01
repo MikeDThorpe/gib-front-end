@@ -2,6 +2,7 @@ import type { GetServerSideProps } from "next";
 import Link from "next/link";
 import Recipe from "../Types/Recipe";
 import RecipesGrid from "../components/features/RecipesGrid";
+import PageSEO from "../components/global/PageSEO";
 
 interface HomeProps {
   latestRecipes: Recipe[];
@@ -9,17 +10,13 @@ interface HomeProps {
 
 const Home = ({ latestRecipes }: HomeProps) => {
   return (
-    <section>
-      <h2 className="text-center mb-5 bold">Latest Recipes</h2>
-      <RecipesGrid recipes={latestRecipes} limit={6} />
-      <Link href={`/recipes`} passHref>
-        <a>
-          <button className="button button-main d-block mx-auto mt-5">
-            More Recipes
-          </button>
-        </a>
-      </Link>
-    </section>
+    <>
+    <PageSEO title="DIY Food Blog" description="DIY food blog. Sheffield, England."/>
+      <section>
+        <h2 className="text-center my-5 bold">Latest Recipes</h2>
+        <RecipesGrid recipes={latestRecipes} limit={6} />
+      </section>
+    </>
   );
 };
 
