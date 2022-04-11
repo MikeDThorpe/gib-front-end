@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import Layout from "../components/global/Layout";
 
 // style sheets
-import "../public/css/main.css";
+import "../css/main.css";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "bootstrap/dist/css/bootstrap-utilities.min.css";
 import Head from "next/head";
