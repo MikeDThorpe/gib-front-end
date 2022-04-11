@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 export interface PageSEOProps {
 	title: string;
 	description: string;
-	category: string;
+	recipeCategory?: string;
 }
 
-const PageSEO = ({ title, description, category }: PageSEOProps) => {
+const PageSEO = ({ title, description, recipeCategory }: PageSEOProps) => {
 	const router = useRouter();
 	return (
 		<Head>
@@ -21,7 +21,7 @@ const PageSEO = ({ title, description, category }: PageSEOProps) => {
 			<meta
 				name="description"
 				property="og:description"
-				content={`${description}. Find more ${category.toLowerCase()} at giveitbeans.co.uk.`}
+				content={`${description}. Find more ${recipeCategory!.toLowerCase()} at giveitbeans.co.uk.`}
 				key="description"
 			/>
 			<meta

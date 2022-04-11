@@ -17,7 +17,7 @@ const RecipePage = ({ recipe }: RecipePageProps) => {
 			<PageSEO
 				title={recipe.title}
 				description={recipe.description}
-				category={recipe.category.title}
+				recipeCategory={recipe.category.title}
 			/>
 			<div className="mt-4">
 				<BreadCrumbs

@@ -1,5 +1,6 @@
 import Tag from "../../../Types/Tag";
 import { GetStaticProps, GetStaticPaths } from "next";
+import PageSEO from "../../../components/global/PageSEO";
 // import RecipesGrid from "../../../components/features/RecipesGrid";
 
 interface TagPageProps {
@@ -8,11 +9,15 @@ interface TagPageProps {
 
 const TagPage = ({ tag }: TagPageProps) => {
   return (
-    <>
-      <h2 className="my-5 text-center bold">Recipes Tagged: {tag.title}</h2>
-      {/* <RecipesGrid recipes={tag.recipes} displayAll={true} /> */}
-    </>
-  );
+		<>
+			<PageSEO
+				title={`Recipes Tagged: ${tag.title}`}
+				description={`A collection of recipes tagged: ${tag.title} from giveitbeans.co.uk.`}
+			/>
+			<h2 className="my-5 text-center bold">Recipes Tagged: {tag.title}</h2>
+			{/* <RecipesGrid recipes={tag.recipes} displayAll={true} /> */}
+		</>
+	);
 };
 
 export default TagPage;
