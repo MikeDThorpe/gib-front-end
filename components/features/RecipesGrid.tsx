@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Recipe from "../../Types/Recipe";
-import RecipeCard from "../page/Recipe/RecipeCard";
-import { recipeMeta } from "../page/Recipe/RecipeCard";
+import RecipeCard from "./RecipeCard";
+import { recipeMeta } from "./RecipeCard";
 
 interface RecipesGridProps {
   recipes: Recipe[];

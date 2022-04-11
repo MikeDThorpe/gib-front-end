@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Recipe from "../../../Types/Recipe";
-import RecipeThumbnail from "./RecipeThumbnail";
+import Recipe from "../../Types/Recipe";
+import RecipeThumbnail from "../page/Recipe/RecipeThumbnail";
 
-import { parseDate } from "../../../js/utils";
+import { parseDate } from "../../js/utils";
 
 export enum recipeMeta {
   DATE,
