@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sass": "sass --watch scss/main.scss public/css/main.css"
+    "sass": "sass --watch scss/main.scss css/main.css"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import useLinkedRecipes from "../../hooks/useLinkedRecipes";
-import RecipeCard, { recipeMeta } from "../page/Recipe/RecipeCard";
+import RecipeCard, { recipeMeta } from "./RecipeCard";
 
 export interface LinkedCategoryRecipesProps {
   categoryTitle: string;
