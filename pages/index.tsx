@@ -6,11 +6,10 @@ import PageSEO from "../components/global/PageSEO";
 
 interface HomeProps {
   latestRecipes: Recipe[];
-  categories:{id: number, title: string}[];
+  categories: { id: number; title: string }[];
 }
 
 const Home = ({ latestRecipes, categories }: HomeProps) => {
-  console.log(categories);
   return (
     <>
       <PageSEO
