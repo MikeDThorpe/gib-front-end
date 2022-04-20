@@ -100,6 +100,19 @@ h5 {
   border-top: 2px solid #85aaaa;
 }
 
+.button {
+  padding: 15px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.button-main {
+  background-color: #85aaaa;
+  color: white;
+}
+
 .recipe_meta_grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -176,19 +189,6 @@ h5 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
-}
-
-.button {
-  padding: 15px 20px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.button-main {
-  background-color: #85aaaa;
-  color: white;
 }
 
 .category-link {

@@ -33,7 +33,7 @@ const RecipeCard = ({ recipe, displayMeta }: RecipeCardProps) => {
           return (
             <>
               <Image
-                src={"/media/icons/tags-solid.svg"}
+                src={"/assets/icons/tags-solid.svg"}
                 height={18}
                 width={18}
                 alt="shopping tags icon"

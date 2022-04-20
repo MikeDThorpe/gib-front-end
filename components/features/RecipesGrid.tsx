@@ -18,7 +18,7 @@ const RecipesGrid = ({ recipes, limit, displayAll }: RecipesGridProps) => {
       : recipes.reverse().slice(0, limit);
 
     setRecipesToShow(filteredRecipes);
-  }, []);
+  }, [displayAll, recipes, limit]);
 
   return (
     <section className="recipe_card_grid">

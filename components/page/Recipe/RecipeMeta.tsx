@@ -18,16 +18,18 @@ const RecipeMeta = ({recipe}: RecipeMetaProps) => {
         <section className="recipe_meta_grid">
           <div className="d-flex align-items-center">
             <Image
-              src={"/media/icons/utensils-solid.svg"}
+              src={"/assets/icons/utensils-solid.svg"}
               height={20}
               width={20}
               alt="kitchen utensils icon"
             />
-            <h5 className="px-2 bold">{recipe.category.title.toUpperCase()} RECIPE</h5>
+            <h5 className="px-2 bold">
+              {recipe.category.title.toUpperCase()} RECIPE
+            </h5>
           </div>
           <div className="d-flex align-items-center">
             <Image
-              src={"/media/icons/tags-solid.svg"}
+              src={"/assets/icons/tags-solid.svg"}
               height={20}
               width={20}
               alt="shopping tags icon"
@@ -45,7 +47,7 @@ const RecipeMeta = ({recipe}: RecipeMetaProps) => {
           </div>
           <div className="d-flex align-items-center">
             <Image
-              src={"/media/icons/user-solid.svg"}
+              src={"/assets/icons/user-solid.svg"}
               height={20}
               width={20}
               alt="a person icon"
@@ -56,7 +58,7 @@ const RecipeMeta = ({recipe}: RecipeMetaProps) => {
           </div>
           <div className="d-flex align-items-center">
             <Image
-              src={"/media/icons/clock-solid.svg"}
+              src={"/assets/icons/clock-solid.svg"}
               height={20}
               width={20}
               alt="a clock icon"
